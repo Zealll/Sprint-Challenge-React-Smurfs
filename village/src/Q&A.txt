@@ -1,0 +1,22 @@
+1. Q: Explain the differences between client-side routing and server-side  routing
+   
+   A: With server side routing, every time we try to access any part of the      
+      data, first, the server has to be contacted, and then we get the data      
+      that we wanted, and this happens every time we route to a different        
+      link.
+
+      With Client Side routing, the first time we access our website, we get 
+      all the data at once, so there is no necesity to contact the server every time we 
+      link to a different component.
+
+
+2. Q: Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+   A: C = POST, R - GET, U - PUT, D - DELETE
+
+
+3. Q: Mention three tools we can use to make AJAX requests.
+
+   A: 1. GET requests
+      2. POST requests
+      3. PUT requests
