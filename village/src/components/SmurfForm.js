@@ -4,11 +4,11 @@ class SmurfForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+      smurf: {
         name: '',
         age: '',
         height: ''
-      
+      }
     };
   }
 
@@ -17,22 +17,22 @@ class SmurfForm extends Component {
     // add code to create the smurf using the api
 
     this.setState({
-      
+      smurf: {
         name: '',
         age: '',
         height: ''
-      
+      }
     });
-    this.props.addSmurf(event, this.state)
+    this.props.addSmurf(event, this.state.smurf)
   }
 
   handleInputChange = e => {
     e.persist()
     this.setState(prevState => ({
-      
-        ...prevState,
+      smurf:{
+        ...prevState.smurf,
         [e.target.name]: e.target.value
-         
+         }
       }));
   };
 
@@ -44,21 +44,21 @@ class SmurfForm extends Component {
             type='text'
             onChange={this.handleInputChange}
             placeholder="name"
-            value={this.state.name}
+            value={this.state.smurf.name}
             name="name"
           />
           <input
             type='number'
             onChange={this.handleInputChange}
             placeholder="age"
-            value={this.state.age}
+            value={this.state.smurf.age}
             name="age"
           />
           <input
             type='number'
             onChange={this.handleInputChange}
             placeholder="height"
-            value={this.state.height}
+            value={this.state.smurf.height}
             name="height"
           />
           <button type="submit">Add to the village</button>
