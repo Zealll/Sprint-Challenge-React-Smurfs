@@ -4,6 +4,7 @@ import { Route, NavLink } from 'react-router-dom'
 import './App.css';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
+import Smurf from './components/Smurf'
 import Axios from 'axios';
 
 class App extends Component {
@@ -45,6 +46,7 @@ class App extends Component {
         </div>
         <Route path='/smurf-form' render={props => <SmurfForm {...props} addSmurf={this.addSmurf}/>}/>
         <Route exact path='/' render={props => <Smurfs {...props} smurfs={this.state.smurfs} />} />
+        <Route exact path='/smurf/:apple' render={props => <Smurf {...props} smurfs={this.state.smurfs} />} />
       </div>
     );
   }
