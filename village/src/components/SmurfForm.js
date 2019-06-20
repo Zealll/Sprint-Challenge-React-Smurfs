@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class SmurfForm extends Component {
       }
     });
     this.props.addSmurf(event, this.state.smurf)
+    this.props.history.push('/')
   }
 
   handleInputChange = e => {
@@ -61,6 +63,7 @@ class SmurfForm extends Component {
             value={this.state.smurf.height}
             name="height"
           />
+          
           <button type="submit">Add to the village</button>
         </form>
       </div>
